@@ -79,6 +79,10 @@ p {
     border: 2px solid transparent;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
 p.outline_hover:hover {
     border: 2px solid hsla(0, 0%, 50%, 40%);
     border-radius: 5px;
@@ -114,7 +118,7 @@ button {
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12), inset 2px 2px 1px rgba(255, 255, 255, 0.4), inset -2px -2px 1px rgba(0, 0, 0, 0.35);
 }
 
-button > span, .lsw-bold {
+button > span, button > .lsw-bold {
     font-family: var(--font_b);
     font-size: calc(16px * var(--multiplier_font));
 }
@@ -178,23 +182,22 @@ video, img {
 }
 
 .lsw-btn_default, .lsw-blk_default {
-    background-color: hsl(212, 100%, 15%);
-    border: 2px solid hsl(0, 0%, 20%);
+    background-color: hsl(0, 0%, 60%);
+    border: 1px solid hsl(0, 0%, 20%);
     box-sizing: border-box;
     display: inline-block;
-    padding: 0.7em 1.4em;
+    padding: 0.5em 3.5em;
     border-radius: 8px;
     margin: 0.12em;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    box-shadow: inset 2px 2px 1px rgba(255, 255, 255, 0.4), inset -2px -2px 1px rgba(0, 0, 0, 0.35);
-    transition: all 0.5s;
-    
+    /*box-shadow: inset 2px 2px 1px rgba(255, 255, 255, 0.4), inset -2px -2px 1px rgba(0, 0, 0, 0.35);*/
+    transition: background-color 0.15s, color 0.15s;
     font-family: var(--font_b);
 }
 
 .lsw-blk_default {
-    background-color: hsl(212, 100%, 75%);
+    background-color: hsl(211, 30%, 85%);
     color: rgb(0, 0, 0);
 }
 
@@ -203,9 +206,9 @@ video, img {
 }
 
 .lsw-btn_default:hover {
-    background-color: hsl(212, 100%, 75%);
+    background-color: hsl(211, 30%, 85%);
     color: rgb(0, 0, 0);
-    transition: all 0.5s;
+    transition: all 0.25s;
 }
 
 .lsw-bar_default {
