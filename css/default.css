@@ -129,12 +129,24 @@ button:hover {
     box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.5), inset 0 0 500px 1px rgba(255, 255, 255, 0.24);
     transition: all 0.1s;
 }
-
 button:active{
     transform: translate(1px, 1px);
     box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
     transition: all 0.2s;
 }
+
+button.disabled:hover {
+    border-color: rgb(139, 139, 139);
+    transform: none;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2), inset 0 0 500px 1px rgba(255, 255, 255, 0.4);
+    transition: all 0.2s;
+}
+button.disabled:active{
+    transform: translate(1px, 1px);
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s;
+}
+
 button.inverted {
     background-color: hsl(0, 0%, 40%);
     color: white;
@@ -175,6 +187,10 @@ video, img {
 
 .lsw-large_indent > * {
     text-indent: 7ch;
+}
+
+.lsw-inline {
+    display: inline;
 }
 
 .lsw-ul_inline > * {
@@ -250,6 +266,19 @@ video, img {
     border: 1px solid hsl(0, 0%, 20%);
 }
 
+.lsw-btn_default.cyan {
+    background-color: hsl(195, 20%, 40%);
+    border: 1px solid hsl(0, 0%, 20%);
+}
+.lsw-btn_default:hover.cyan {
+    background-color: hsl(195, 30%, 75%);
+    border: 1px solid hsl(0, 0%, 20%);
+}
+.lsw-btn_default:active.cyan {
+    background-color: hsl(195, 20%, 55%);
+    border: 1px solid hsl(0, 0%, 20%);
+}
+
 
 
 .lsw-bar_default {
@@ -317,6 +346,10 @@ video, img {
     border: 2px solid hsla(0, 0%, 50%, 40%);
     border-radius: 15px;
     transition: all 0.2s;
+}
+
+.lsw-arrowed::before {
+    content: '▸ ';
 }
 
 
@@ -393,6 +426,35 @@ video, img {
     background-color: white;
     box-sizing: border-box;
     border: 2px solid rgb(80, 80, 80);
+}
+.lsw-frame_gen_soft {
+    border-radius: 10px;
+    padding: 1.1em 2.1em;
+    margin: 1.2em 0;
+    background-color: hsla(0, 0%, 100%, 0.5);
+    box-sizing: border-box;
+    border: 1px solid rgba(80, 80, 80, 0.2);
+    transition: background-color 0.3s, border 0.3s;
+}
+.lsw-frame_gen_soft:hover {
+    background-color: hsla(0, 0%, 100%, 0.8);
+    border: 1px solid rgba(80, 80, 80, 0.6);
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.lsw-frame_gen_soft.highlighted {
+    border-radius: 10px;
+    padding: 1.1em 2.1em;
+    margin: 1.2em 0;
+    background-color: hsla(107, 100%, 70%, 0.5);
+    box-sizing: border-box;
+    border: 1px solid rgba(80, 80, 80, 0.2);
+    transition: background-color 0.3s, border 0.3s;
+}
+.lsw-frame_gen_soft.highlighted:hover {
+    background-color: hsla(107, 100%, 80%, 0.8);
+    border: 1px solid rgba(80, 80, 80, 0.6);
+    transition: background-color 0.3s, border 0.3s;
 }
 
 .lsw-autoflex-up2, .lsw-autoflex-up3, .lsw-autoflex-up4 {
@@ -475,4 +537,55 @@ video, img {
     object-fit: scale-down;
     background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 0 0 1px 99999px rgba(0, 0, 0, 0.8);
+}
+
+
+/* style=\"text-decoration: underline; font-size: 1.2em" + (obj["discontinued"] === true ? "; color: red" : "") + "\" */
+.lsw-dict-list-messages {
+    text-decoration: none;   
+    font-size: 1.1em;
+}
+.lsw-dict-list-messages > * {
+    margin: 0;
+    padding: 0;
+    text-indent: 1em;
+}
+.lsw-dict-obsolete {
+    color: rgb(136, 16, 16);
+}
+.lsw-dict-replacement {
+    color: rgb(21, 129, 175);
+}
+
+
+.lsw-btn_default.bar_selector {
+    padding: 0.4em 0.7em;
+    border-radius: 2px;
+    min-height: 30px;
+    background-color: hsla(195, 28%, 34%, 0.9);
+    border: 1px solid hsla(0, 0%, 20%, 20%);
+    color: white;
+}
+.lsw-btn_default.bar_selector.disabled {
+    background-color: hsla(5, 7%, 33%, 0.8);
+}
+.lsw-btn_default.bar_selector::before {
+    content: attr(resumed-text);
+}
+.lsw-btn_default.bar_selector:hover::before {
+    content: attr(text);
+}
+.lsw-btn_default.bar_selector:active::before {
+    content: attr(text);
+}
+.lsw-btn_default.bar_selector.selected {
+    border: 1px solid hsla(0, 0%, 16%, 0.9);
+    box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.9), inset 1px 1px 3px rgba(255, 255, 255, 0.9), 0px 0px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.lsw-btn_default.bar_selector.selected::before {
+    content: attr(text);
+}
+
+.lsw-hide {
+    display: none;
 }
