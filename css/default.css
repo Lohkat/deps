@@ -351,6 +351,9 @@ video, img {
 .lsw-arrowed::before {
     content: '▸ ';
 }
+.lsw-arrowed2::before {
+    content: '➜ ';
+}
 
 
 .lsw-offset_list_min > li {
@@ -555,6 +558,12 @@ video, img {
 }
 .lsw-dict-replacement {
     color: rgb(21, 129, 175);
+}
+.lsw-dict-subtitle {
+    padding: 0 0 0 0.5em;
+    margin-top: 0.5em;
+    line-height: 2ch;
+    text-decoration: underline;
 }
 
 
