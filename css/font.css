@@ -1,0 +1,33 @@
+@font-face { font-family: 'AvaliScratch';           src: url('/deps/fonts/AvaliScratchExtended-Regular.ttf'); }
+@font-face { font-family: 'EMP-Bold';               src: url('/deps/fonts/EMprint-Bold.ttf'); }
+@font-face { font-family: 'EMP-BoldItalic';         src: url('/deps/fonts/EMprint-BoldItalic.ttf'); }
+@font-face { font-family: 'EMP-CondensedBold';      src: url('/deps/fonts/EMprint-CondensedBold.ttf'); }
+@font-face { font-family: 'EMP-CondensedBoldIt';    src: url('/deps/fonts/EMprint-CondensedBoldIt.ttf'); }
+@font-face { font-family: 'EMP-CondensedItalic';    src: url('/deps/fonts/EMprint-CondensedItalic.ttf'); }
+@font-face { font-family: 'EMP-CondensedLight';     src: url('/deps/fonts/EMprint-CondensedLight.ttf'); }
+@font-face { font-family: 'EMP-CondensedLightIt';   src: url('/deps/fonts/EMprint-CondensedLightIt.ttf'); }
+@font-face { font-family: 'EMP-CondensedRegular';   src: url('/deps/fonts/EMprint-CondensedRegular.ttf'); }
+@font-face { font-family: 'EMP-CondensedSemiBold';  src: url('/deps/fonts/EMprint-CondensedSemiBold.ttf'); }
+@font-face { font-family: 'EMP-CondSemiBoldIt';     src: url('/deps/fonts/EMprint-CondSemiBoldIt.ttf'); }
+@font-face { font-family: 'EMP-Light';              src: url('/deps/fonts/EMprint-Light.ttf'); }
+@font-face { font-family: 'EMP-LightItalic';        src: url('/deps/fonts/EMprint-LightItalic.ttf'); }
+@font-face { font-family: 'EMP-Regular';            src: url('/deps/fonts/EMprint-Regular.ttf'); }
+@font-face { font-family: 'EMP-RegularItalic';      src: url('/deps/fonts/EMprint-RegularItalic.ttf'); }
+@font-face { font-family: 'EMP-SemiBold';           src: url('/deps/fonts/EMprint-SemiBold.ttf'); }
+@font-face { font-family: 'EMP-SemiBoldItalic';     src: url('/deps/fonts/EMprint-SemiBoldItalic.ttf'); }
+
+:root, .default-font {
+    --font:    'EMP-Regular';
+    --font_sb: 'EMP-SemiBold';
+    --font_b:  'EMP-Bold';
+    --multiplier_font: 1;
+    font-family: var(--font);
+}
+
+.avali-font {
+    --font:     'AvaliScratch';
+    --font_sb:  'AvaliScratch';
+    --font_b:   'AvaliScratch';
+    --multiplier_font: 1.5;
+    font-family: var(--font);
+}
