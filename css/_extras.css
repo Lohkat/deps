@@ -1,0 +1,343 @@
+
+
+.lsw-bar_default {
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 2px hsl(0, 0, 100);
+}
+
+.lsw-bar_default > * {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+}
+
+.lsw-list_log {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    gap: 2px;
+    margin: 0;
+    padding: 0;
+    border: 2px solid hsl(0, 0%, 20%);
+    padding: 2px;
+    border-radius: 5px;
+    transition: all 0.5s;
+    box-shadow: inset 2px 2px 1px rgba(255, 255, 255, 0.4), inset -2px -2px 1px rgba(68, 68, 68, 0.35);
+}
+.lsw-list_log:hover {    
+    box-shadow: inset 2px 2px 6px rgba(255, 255, 255, 0.9), inset -2px -2px 6px rgba(68, 68, 68, 0.85), inset 2px 2px 6px rgba(255, 255, 255, 0.9), inset -2px -2px 6px rgba(68, 68, 68, 0.85);
+    transition: all 0.5s;
+}
+.lsw-list_log > li {
+    margin: 0;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    border: 1px solid hsla(0, 0%, 50%, 20%);
+    background-color: rgb(255, 255, 255);
+    padding: 0.2em;
+}
+
+.lsw-arrow_list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    gap: 2px;
+    margin: 0;
+    padding: 2px;
+    transition: all 0.5s;
+}
+.lsw-arrow_list > li::before {
+    content: '▸ ';
+}
+.lsw-arrow_list > li {
+    margin: 0;
+    border-radius: 15px;
+    border: 2px solid hsla(0, 0%, 50%, 0);
+    background-color: rgb(255, 255, 255);
+    padding: 0.2em 0 0.4em 0;
+    transition: all 0.2s;
+}
+.lsw-arrow_list > li:hover {
+    border: 2px solid hsla(0, 0%, 50%, 40%);
+    border-radius: 15px;
+    transition: all 0.2s;
+}
+
+.lsw-arrowed::before {
+    content: '▸ ';
+}
+.lsw-arrowed2::before {
+    content: '➜ ';
+}
+
+
+.lsw-offset_list_min > li {
+    margin-left: 1em;
+}
+.lsw-offset_list_mid > li {
+    margin-left: 2em;
+}
+.lsw-offset_list_high > li {
+    margin-left: 2.9em;
+}
+
+
+.lsw-list {
+    /*list-style-type: none;*/
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    gap: 2px;
+    margin: 0;
+    padding: 0;
+    /*border: 2px solid hsl(0, 0%, 20%);*/
+    padding: 2px;
+    /*border-radius: 5px;*/
+    transition: all 0.5s;
+    /*box-shadow: inset 2px 2px 1px rgba(255, 255, 255, 0.4), inset -2px -2px 1px rgba(68, 68, 68, 0.35);*/
+}
+.lsw-list > li {
+    margin: 0;
+    padding: 0.1em;
+    transition: all 0.2s;
+}
+.lsw-list > li:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+
+.lsw-bold {
+    font-family: var(--fontb);
+    font-weight: 900;
+}
+.lsw-italic {
+    font-family: var(--font);
+    font-style: italic;
+}
+.lsw-center {
+    text-align: center !important;
+    object-position: center;
+    position: relative;
+    width: 100% !important;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.lsw-headline {
+    width: 100%;
+    max-height: 10vh;
+    object-fit: scale-down;
+    margin-bottom: 1em;
+    text-decoration: underline;
+}
+
+.lsw-title {
+    margin: 0.8em 0.1em 0.8em 0.1em;
+    line-height: 2ch;
+    text-decoration: underline;
+}
+
+.lsw-frame_gen {
+    border-radius: 10px;
+    padding: 1.1em 2.1em;
+    margin: 1.2em 0;
+    background-color: white;
+    box-sizing: border-box;
+    border: 2px solid rgb(80, 80, 80);
+}
+.lsw-frame_gen_soft {
+    border-radius: 10px;
+    padding: 1.1em 2.1em;
+    margin: 1.2em 0;
+    background-color: hsla(0, 0%, 100%, 0.5);
+    box-sizing: border-box;
+    border: 1px solid rgba(80, 80, 80, 0.2);
+    transition: background-color 0.3s, border 0.3s;
+}
+.lsw-frame_gen_soft:hover {
+    background-color: hsla(0, 0%, 100%, 0.8);
+    border: 1px solid rgba(80, 80, 80, 0.6);
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.lsw-frame_gen_soft.highlighted {
+    border-radius: 10px;
+    padding: 1.1em 2.1em;
+    margin: 1.2em 0;
+    background-color: hsla(107, 100%, 70%, 0.5);
+    box-sizing: border-box;
+    border: 1px solid rgba(80, 80, 80, 0.2);
+    transition: background-color 0.3s, border 0.3s;
+}
+.lsw-frame_gen_soft.highlighted:hover {
+    background-color: hsla(107, 100%, 80%, 0.8);
+    border: 1px solid rgba(80, 80, 80, 0.6);
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.lsw-autoflex-up2, .lsw-autoflex-up3, .lsw-autoflex-up4, .lsw-autoflex-up5, .lsw-autoflex-up6, .lsw-autoflex-up7, .lsw-autoflex-up8 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 !important;
+    padding: 0 !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem; /* related to > * there vvv */
+}
+.lsw-autoflex-up2 > * {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: calc(50% - 2 * 1rem); /* by default force up to 2 items (50% - gap for 3 items) */
+}
+.lsw-autoflex-up3 > * {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: calc(33% - 2 * 1rem); /* by default force up to 3 items (33% - gap for 3 items) */
+}
+.lsw-autoflex-up4 > * {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: calc(25% - 2 * 1rem); /* by default force up to 4 items (25% - gap for 3 items) */
+}
+.lsw-autoflex-up5 > * {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: calc(25% - 2 * 1rem); /* by default force up to 4 items (25% - gap for 3 items) */
+}
+.lsw-autoflex-up6 > * {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: calc(25% - 2 * 1rem); /* by default force up to 4 items (25% - gap for 3 items) */
+}
+.lsw-autoflex-up7 > * {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: calc(25% - 2 * 1rem); /* by default force up to 4 items (25% - gap for 3 items) */
+}
+.lsw-autoflex-up8 > * {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: calc(25% - 2 * 1rem); /* by default force up to 4 items (25% - gap for 3 items) */
+}
+
+.lsw-gallery {
+    gap: 0.85rem;
+    margin: 1em 0 1.5em !important;
+}
+.lsw-gallery > .topic {
+    border-radius: 6px;
+    border: 2px solid hsl(0, 0%, 60%);
+    box-shadow: hsl(0, 0%, 60%) 3px 3px 6px 2px, inset hsl(0, 0%, 60%) 3px 3px 6px 2px;
+    max-height: 400px;
+    object-fit:cover;
+    display: inline-block;
+    box-sizing: border-box;
+    transition: all 0.1s;
+}
+.topic > img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.topic > button {
+    background-color: hsl(110, 56%, 68%);
+    opacity: 0;
+    display: none;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+.topic:hover > button {
+    opacity: 1;
+    display: block;
+}
+.lsw-gallery > .topic:hover {
+    transform: scale(1.05) rotate(0.7deg);
+    transition: all 0.2s;
+}
+
+.fullscreen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 0;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    text-align: center;
+}
+.fullscreen > img {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    object-fit: scale-down;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 1px 99999px rgba(0, 0, 0, 0.8);
+}
+
+
+/* style=\"text-decoration: underline; font-size: 1.2em" + (obj["discontinued"] === true ? "; color: red" : "") + "\" */
+.lsw-dict-list-messages {
+    text-decoration: none;   
+    font-size: 1.1em;
+}
+.lsw-dict-list-messages > * {
+    margin: 0;
+    padding: 0;
+    text-indent: 1em;
+}
+.lsw-dict-obsolete {
+    color: rgb(136, 16, 16);
+}
+.lsw-dict-replacement {
+    color: rgb(21, 129, 175);
+}
+.lsw-dict-subtitle {
+    padding: 0 0 0 0.5em;
+    margin-top: 0.5em;
+    line-height: 2ch;
+    text-decoration: underline;
+}
+.lsw-dict-nogrow {
+    flex-grow: 0;
+    width: auto;
+}
+
+
+.lsw-btn_default.bar_selector {
+    padding: 0.4em 0.7em;
+    border-radius: 2px;
+    min-height: 30px;
+    background-color: hsla(195, 28%, 34%, 0.9);
+    border: 1px solid hsla(0, 0%, 20%, 20%);
+    color: white;
+}
+.lsw-btn_default.bar_selector.disabled {
+    background-color: hsla(5, 7%, 33%, 0.8);
+}
+.lsw-btn_default.bar_selector::before {
+    content: attr(text);
+}
+.lsw-btn_default.bar_selector:hover::before {
+    content: attr(text);
+}
+.lsw-btn_default.bar_selector:active::before {
+    content: attr(text);
+}
+.lsw-btn_default.bar_selector.selected {
+    border: 1px solid hsla(0, 0%, 16%, 0.9);
+    box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.9), inset 1px 1px 3px rgba(255, 255, 255, 0.9), 0px 0px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.lsw-btn_default.bar_selector.selected::before {
+    content: attr(text-delayed);
+}
+
+.lsw-hide {
+    display: none;
+}

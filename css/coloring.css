@@ -1,0 +1,25 @@
+.c-nobg {
+    background-color: transparent !important;
+}
+
+.c-spoiler {
+    opacity: 0.1;
+    transition: opacity 0.1s ease-in-out;
+}
+.c-spoiler:hover {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+/*section.h230 {
+    box-shadow: inset 0 0 0 0.25rem hsl(230, 70%, 80%), 0 0 1px 0.25rem hsl(230, 70%, 80%);
+    background: hsl(230, 40%, 95%);
+    transition: all 0.1s ease-in-out;
+}
+section.h230:hover {
+    box-shadow: inset 0 0 0 0.25rem hsl(230, 70%, 83%), 0 0 3px 0.25rem hsl(230, 70%, 83%);
+    background: hsl(230, 40%, 96%);
+    transition: all 0.1s ease-in-out;
+}*/

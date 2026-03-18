@@ -1,0 +1,71 @@
+.b-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.b-flex.b-gap {
+    gap: calc(2 * var(--border_radius));
+}
+.b-flex.b-nowrap {
+    flex-wrap: nowrap;
+}
+.b-flex.b-row {
+    flex-direction: row;
+}
+.b-flex.b-col {
+    flex-direction: column;
+}
+
+.b-flex.b-center {
+    align-items: center;
+}
+.b-flex.b-stretch {
+    align-items: stretch;
+}
+
+.b-flex.b-between {
+    justify-content: space-between;
+}
+.b-flex.b-around {
+    justify-content: space-around;
+}
+.b-flex.b-evenly {
+    justify-content: space-evenly;
+}
+
+.b-flex > *.c-center_h {
+    height: 100%;
+    align-self: center;
+    padding: 0;
+    margin: 0;
+}
+.b-flex > *.c-center_w {
+    width: 100%;
+    align-self: center;
+    padding: 0;
+    margin: 0;
+}
+
+.w100 {
+    width: 100%;
+}
+.h100 {
+    height: 100%;
+}
+
+.c-flex {
+    flex: 1 0 auto;
+}
+.c-tab {
+    margin-left: 2.5rem;
+}
+
+.c-space::before {    
+    content: "";
+    display: inline-block;
+    padding-top: 1.6rem;
+}
+.c-space::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.6rem;
+}
