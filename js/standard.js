@@ -1,13 +1,23 @@
 /* dark mode btn */
-Array.from(document.getElementsByClassName("toggle-dark-mode")).forEach(element => {
+const darkModeButtons = Array.from(document.getElementsByClassName("toggle-dark-mode"));
+function makeBodyDark() { 
+    darkModeButtons.forEach(e => e.setAttribute("state", "black"));
+    document.body.classList.add("dark-mode");
+    localStorage.setItem("state-dark-mode", "black");
+}
+function makeBodyWhite() {
+    darkModeButtons.forEach(e => e.setAttribute("state", "white"));
+    document.body.classList.remove("dark-mode");
+    localStorage.setItem("state-dark-mode", "white");
+}
+darkModeButtons.forEach(element => {
     element.addEventListener("click", () => {
         const state = element.getAttribute("state");
-        if (state == "white") {
-            element.setAttribute("state", "black");
-            document.body.classList.add("dark-mode");
+        if (state == "white") {            
+            makeBodyDark();
         } else {
-            element.setAttribute("state", "white");
-            document.body.classList.remove("dark-mode");
+            makeBodyWhite();
         }
-    })
+    });
 });
+if (localStorage.getItem("state-dark-mode") === "black") { makeBodyDark(); }

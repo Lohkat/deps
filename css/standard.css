@@ -253,7 +253,7 @@ blockquote {
 }
 
 .heighten {
-    min-height: 35rem;
+    min-height: calc(min(35rem, 100vh));
 }
 
 button {
