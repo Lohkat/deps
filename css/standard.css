@@ -1,0 +1,317 @@
+@font-face { font-family: 'AvaliScratch';           src: url('/deps/fonts/AvaliScratchExtended-Regular.ttf'); }
+@font-face { font-family: 'EMP-Bold';               src: url('/deps/fonts/EMprint-Bold.ttf'); }
+@font-face { font-family: 'EMP-BoldItalic';         src: url('/deps/fonts/EMprint-BoldItalic.ttf'); }
+@font-face { font-family: 'EMP-CondensedBold';      src: url('/deps/fonts/EMprint-CondensedBold.ttf'); }
+@font-face { font-family: 'EMP-CondensedBoldIt';    src: url('/deps/fonts/EMprint-CondensedBoldIt.ttf'); }
+@font-face { font-family: 'EMP-CondensedItalic';    src: url('/deps/fonts/EMprint-CondensedItalic.ttf'); }
+@font-face { font-family: 'EMP-CondensedLight';     src: url('/deps/fonts/EMprint-CondensedLight.ttf'); }
+@font-face { font-family: 'EMP-CondensedLightIt';   src: url('/deps/fonts/EMprint-CondensedLightIt.ttf'); }
+@font-face { font-family: 'EMP-CondensedRegular';   src: url('/deps/fonts/EMprint-CondensedRegular.ttf'); }
+@font-face { font-family: 'EMP-CondensedSemiBold';  src: url('/deps/fonts/EMprint-CondensedSemiBold.ttf'); }
+@font-face { font-family: 'EMP-CondSemiBoldIt';     src: url('/deps/fonts/EMprint-CondSemiBoldIt.ttf'); }
+@font-face { font-family: 'EMP-Light';              src: url('/deps/fonts/EMprint-Light.ttf'); }
+@font-face { font-family: 'EMP-LightItalic';        src: url('/deps/fonts/EMprint-LightItalic.ttf'); }
+@font-face { font-family: 'EMP-Regular';            src: url('/deps/fonts/EMprint-Regular.ttf'); }
+@font-face { font-family: 'EMP-RegularItalic';      src: url('/deps/fonts/EMprint-RegularItalic.ttf'); }
+@font-face { font-family: 'EMP-SemiBold';           src: url('/deps/fonts/EMprint-SemiBold.ttf'); }
+@font-face { font-family: 'EMP-SemiBoldItalic';     src: url('/deps/fonts/EMprint-SemiBoldItalic.ttf'); }
+
+:root, .default-font {
+    --font:    'EMP-Regular';
+    --font_i:  'EMP-Italic';
+    --font_sb: 'EMP-SemiBold';
+    --font_b:  'EMP-Bold';
+
+    --main-color: hsl(0, 0%, 0%);
+    --invert-color: hsl(0, 0%, 100%);
+    --bg-color: hsl(0, 0%, 90%);
+    --sub-bg-color: hsl(200, 60%, 65%);
+    --sub2-bg-color: hsl(135, 40%, 32%);
+
+    --multiplier_font: 1rem;
+    --border_radius: 0.5rem;
+    font-family: var(--font);
+}
+
+.dark-mode {
+    --main-color: hsl(0, 0%, 100%);
+    --invert-color: hsl(0, 0%, 0%);
+    --bg-color: hsl(0, 0%, 10%);
+    --sub-bg-color: hsl(200, 40%, 60%);
+    --sub2-bg-color: hsl(135, 25%, 40%);
+}
+
+.f-avali {
+    --font:     'AvaliScratch';
+    --font_i:   'AvaliScratch';
+    --font_sb:  'AvaliScratch';
+    --font_b:   'AvaliScratch';
+    --multiplier_font: 1.2rem;
+    font-family: var(--font);
+}
+
+@media screen and (max-width: 640px) {
+    :root, .default-font {
+        --font: 'EMP-Regular';
+        --font_sb: 'EMP-SemiBold';
+        --font_b: 'EMP-Bold';
+        --multiplier_font: 0.83rem;
+    }
+    .avali {
+        --font: 'AvaliScratch';
+        --font_sb: 'AvaliScratch';
+        --font_b: 'AvaliScratch';
+        --multiplier_font: 0.93rem;
+    }    
+}
+@media screen and (max-width: 440px) {
+    :root, .default-font {
+        --font: 'EMP-Regular';
+        --font_sb: 'EMP-SemiBold';
+        --font_b: 'EMP-Bold';
+        --multiplier_font: 0.75rem;
+    }
+    .avali {
+        --font: 'AvaliScratch';
+        --font_sb: 'AvaliScratch';
+        --font_b: 'AvaliScratch';
+        --multiplier_font: 0.93rem;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font);
+    font-size: var(--multiplier_font);
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    min-width: 360px;
+    line-height: inherit;
+}
+
+body {
+    color: var(--main-color);
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+}
+
+section {
+    width: 100%;
+    padding: 3rem 5rem;
+    box-shadow: inset 0px 0px 25px -12px black;
+}
+section.bg_me {
+    background: url("/images/background_me.jpg") center/cover no-repeat;
+}
+
+section.main {
+    flex: 1 0 auto;
+}
+
+section.footer {
+    padding: 2rem 5rem;
+    background-color: var(--sub2-bg-color);
+    color: var(--invert-color);
+}
+
+section > div[type="block"] {
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+    /*background-color: yellow;*/
+}
+
+h1 {
+    font-size: 6rem;
+}
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 2.5rem;
+}
+h4 {
+    font-size: 2.0rem;
+}
+h5 {
+    font-size: 1.6rem;
+}
+h6 {
+    font-size: 1.1rem;
+}
+p {
+    font-size: 1.2rem;
+}
+span {
+    font-size: inherit;
+}
+a {
+    color: var(--main-color);
+    text-decoration: none;
+    padding: 0;
+}
+
+section.main h1 {
+    margin-top: 1.4rem;
+    margin-bottom: 2rem;
+}
+section.main h2 {
+    margin-top: 0.8rem;
+    margin-bottom: 1.4rem;
+}
+section.main h3 {
+    margin-top: 0.4rem;
+    margin-bottom: 1.1rem;
+}
+section.main h4 {
+    margin-top: 0.15rem;
+    margin-bottom: 0.95rem;
+}
+section.main h5 {
+    margin-bottom: 0.8rem;
+}
+section.main h6 {
+    margin-bottom: 0.6rem;
+}
+section.main p {
+    margin-bottom: 0.6rem;
+}
+
+section.main :is(h1, h2, h3)::after {
+    content: '';
+    width: 100%;
+    display: block;
+    border-bottom: 2px dashed var(--main-color);
+    opacity: 0.6;
+}
+
+
+blockquote {
+    font-family: var(--font_i);
+    font-size: 1.1rem;
+}
+
+.white {
+    color: white;
+}
+.highlight {
+    text-shadow: 3px 3px 5px black;
+}
+:is(a, button, p, span).highlight {
+    text-shadow: 1px 1px 1px black;
+}
+
+.ytop {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.ybottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.ycenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.xleft {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.xright {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.xcenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.spoiler {
+    opacity: 0.1;
+    transition: opacity 0.6s ease-in-out;
+}
+.spoiler:focus,
+.spoiler:hover {
+    opacity: 1;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.heighten {
+    min-height: 35rem;
+}
+
+button {
+    border: none;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    border-radius: 3px;
+    width: 100%;
+    background-color: var(--sub-bg-color);
+    transition: box-shadow 0.1s ease-in-out;
+}
+button:hover,
+button:focus {
+    box-shadow: inset 0 0 500px hsla(0, 0%, 100%, 0.2);
+    transition: box-shadow 0.1s ease-in-out;
+}
+button:active {
+    box-shadow: inset 0 0 500px hsla(0, 0%, 0%, 0.1);
+    transition: box-shadow 0.1s ease-in-out;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0.4rem 0 1.2rem 0;
+    margin: 0;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+ul.fill {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+ul.fill > * {
+    flex: 1 1 1px;
+    min-width: max-content;
+}
+
+
+/* Special case */
+.toggle-dark-mode {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    border-radius: 16px;
+    font-size: 1.8rem;
+}
+.toggle-dark-mode[state="white"]::before {
+    content: '☀️';
+}
+.toggle-dark-mode[state="black"]::before {
+    content: '🌚';
+}
