@@ -1,0 +1,605 @@
+@font-face { font-family: 'AvaliScratch';           src: url('/deps/fonts/AvaliScratchExtended-Regular.ttf'); }
+@font-face { font-family: 'EMP-Bold';               src: url('/deps/fonts/EMprint-Bold.ttf'); }
+@font-face { font-family: 'EMP-BoldItalic';         src: url('/deps/fonts/EMprint-BoldItalic.ttf'); }
+@font-face { font-family: 'EMP-CondensedBold';      src: url('/deps/fonts/EMprint-CondensedBold.ttf'); }
+@font-face { font-family: 'EMP-CondensedBoldIt';    src: url('/deps/fonts/EMprint-CondensedBoldIt.ttf'); }
+@font-face { font-family: 'EMP-CondensedItalic';    src: url('/deps/fonts/EMprint-CondensedItalic.ttf'); }
+@font-face { font-family: 'EMP-CondensedLight';     src: url('/deps/fonts/EMprint-CondensedLight.ttf'); }
+@font-face { font-family: 'EMP-CondensedLightIt';   src: url('/deps/fonts/EMprint-CondensedLightIt.ttf'); }
+@font-face { font-family: 'EMP-CondensedRegular';   src: url('/deps/fonts/EMprint-CondensedRegular.ttf'); }
+@font-face { font-family: 'EMP-CondensedSemiBold';  src: url('/deps/fonts/EMprint-CondensedSemiBold.ttf'); }
+@font-face { font-family: 'EMP-CondSemiBoldIt';     src: url('/deps/fonts/EMprint-CondSemiBoldIt.ttf'); }
+@font-face { font-family: 'EMP-Light';              src: url('/deps/fonts/EMprint-Light.ttf'); }
+@font-face { font-family: 'EMP-LightItalic';        src: url('/deps/fonts/EMprint-LightItalic.ttf'); }
+@font-face { font-family: 'EMP-Regular';            src: url('/deps/fonts/EMprint-Regular.ttf'); }
+@font-face { font-family: 'EMP-RegularItalic';      src: url('/deps/fonts/EMprint-RegularItalic.ttf'); }
+@font-face { font-family: 'EMP-SemiBold';           src: url('/deps/fonts/EMprint-SemiBold.ttf'); }
+@font-face { font-family: 'EMP-SemiBoldItalic';     src: url('/deps/fonts/EMprint-SemiBoldItalic.ttf'); }
+
+:root, .default-font {
+    --font:    'EMP-Regular';
+    --font_i:  'EMP-Italic';
+    --font_sb: 'EMP-SemiBold';
+    --font_b:  'EMP-Bold';
+
+    --main-color: hsl(0, 0%, 0%);
+    --invert-color: hsl(0, 0%, 100%);
+    --bg-color: hsl(0, 0%, 90%);
+    --bg2-color: hsl(0, 0%, 80%);
+    --bg3-color: hsl(0, 0%, 70%);
+    --bg4-color: hsl(0, 0%, 95%);
+    --sub-bg-color: hsl(200, 60%, 65%);
+    --sub2-bg-color: hsl(135, 40%, 32%);
+    --sub3-bg-color: hsl(200, 40%, 40%);
+
+    --good-bg-color: hsl(123, 60%, 72%);
+    --good2-bg-color: hsl(180, 56%, 70%);
+    --bad-bg-color: hsl(0, 68%, 77%);
+    --bad2-bg-color: hsl(36, 64%, 75%);
+
+    --multiplier_font: 1rem;
+    --border_radius: 0.5rem;
+    font-family: var(--font);
+}
+
+.dark-mode {
+    --main-color: hsl(0, 0%, 100%);
+    --invert-color: hsl(0, 0%, 0%);
+    --bg-color: hsl(0, 0%, 10%);
+    --bg2-color: hsl(0, 0%, 20%);
+    --bg3-color: hsl(0, 0%, 30%);
+    --bg4-color: hsl(0, 0%, 5%);
+    --sub-bg-color: hsl(200, 40%, 60%);
+    --sub2-bg-color: hsl(135, 25%, 40%);
+    --sub3-bg-color: hsl(200, 35%, 20%);
+
+    --good-bg-color: hsl(123, 47%, 36%);
+    --good2-bg-color: hsl(180, 66%, 33%);
+    --bad-bg-color: hsl(0, 47%, 36%);
+    --bad2-bg-color: hsl(36, 66%, 33%);
+    
+}
+
+.f-avali {
+    --font:     'AvaliScratch';
+    --font_i:   'AvaliScratch';
+    --font_sb:  'AvaliScratch';
+    --font_b:   'AvaliScratch';
+    --multiplier_font: 1.2rem;
+    font-family: var(--font);
+}
+
+@media screen and (max-width: 640px) {
+    :root, .default-font {
+        --font: 'EMP-Regular';
+        --font_sb: 'EMP-SemiBold';
+        --font_b: 'EMP-Bold';
+        --multiplier_font: 0.83rem;
+    }
+    .avali {
+        --font: 'AvaliScratch';
+        --font_sb: 'AvaliScratch';
+        --font_b: 'AvaliScratch';
+        --multiplier_font: 0.93rem;
+    }    
+}
+@media screen and (max-width: 440px) {
+    :root, .default-font {
+        --font: 'EMP-Regular';
+        --font_sb: 'EMP-SemiBold';
+        --font_b: 'EMP-Bold';
+        --multiplier_font: 0.75rem;
+    }
+    .avali {
+        --font: 'AvaliScratch';
+        --font_sb: 'AvaliScratch';
+        --font_b: 'AvaliScratch';
+        --multiplier_font: 0.93rem;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font);
+    font-size: var(--multiplier_font);
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    min-width: 360px;
+    line-height: inherit;
+}
+
+body {
+    color: var(--main-color);
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+}
+
+section {
+    width: 100%;
+    padding: 3rem 5rem;
+    box-shadow: inset 0px 0px 25px -12px black ;
+}
+section[type="sub"] {
+    border-radius: 15px;
+    padding: 1rem 2.5rem;
+    margin: 2em 0 3.5em;
+    box-shadow: 5px 5px 10px 0px hsla(0, 0%, 0%, 0.15);
+    background-color: var(--bg4-color);
+}
+section.bg_me {
+    background: url("/images/photography/photo\ \(47\).webp") center/cover no-repeat;
+}
+
+section.main {
+    flex: 1 0 auto;
+}
+
+section.footer {
+    padding: 2rem 5rem;
+    background-color: var(--sub2-bg-color);
+    color: var(--invert-color);
+}
+
+section div[type="small-block"] {
+    width: 80%;
+    max-width: 45rem;
+    margin: 0 auto;
+}
+section div[type="block"] {
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+section div[type="large-block"] {
+    width: 100%;
+    max-width: 90rem;
+    margin: 0 auto;
+}
+section div[type="center-header"] {
+    width: 100%;
+    max-width: 90rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section div[type="center-header"] > :is(h1,h2,h3,h4,h5,h6,p,span) {
+    text-align: center;
+}
+
+div[type="fs-overlay"] {
+    position: sticky;
+    inset: 0;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: hsla(0, 0%, 0%, 0.7);
+}
+div[type="fs-overlay"] > * {
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 5px 5px 30px -5px hsl(0, 0%, 0%);
+}
+
+div[type="journal"] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin: 0 auto;
+    align-self: flex-end;
+}
+div[type="journal"] > * {
+    flex: 1 1 calc(50% - 0.625rem);
+    min-width: max(calc(50% - 0.625rem), fit-content);
+}
+
+div[type="pairs"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+
+br[type] {
+  content: "";
+  display: block;
+  font-size: 24%;
+}
+br[type="micro"] {
+  margin: 1em;
+}
+br[type="mini"] {
+  margin: 1.5em;
+}
+br[type="normal"] {
+  margin: 2em;
+}
+br[type="large"] {
+  margin: 4em;
+}
+br[type="huge"] {
+  margin: 8em;
+}
+br[type="enormous"] {
+  margin: 30em;
+}
+
+div[type="horizontal-bar"] {
+    background: linear-gradient(90deg, var(--sub-bg-color) 50%, var(--sub3-bg-color) 50.01%);
+    margin: 0;
+    padding: 0 0.4em;
+    text-align: center;
+    box-shadow: 0 0 1px 0.3px rgb(0, 0, 0);
+    border-radius: 8px;
+    margin: 0.5em 0.1em;
+    box-sizing: border-box;
+    /*border: 1px solid black;*/
+    position: relative;
+}
+div[type="horizontal-bar"] > span {
+    pointer-events: none;
+    user-select: none;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    text-shadow: 1px 1px 2px hsla(0, 0%, 0%, 0.7);
+}
+div[type="horizontal-bar"] > span::before {
+    content: attr(before);
+    padding-right: 0.4em;
+}
+div[type="horizontal-bar"] > span::after {
+    content: attr(after);
+    padding-left: 0.4em;
+}
+
+h1 {
+    font-size: 6rem;
+}
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 2.5rem;
+}
+h4 {
+    font-size: 2.0rem;
+}
+h5 {
+    font-size: 1.6rem;
+}
+h6 {
+    font-size: 1.1rem;
+}
+p {
+    font-size: 1.2rem;
+}
+span {
+    font-size: inherit;
+}
+a {
+    color: var(--main-color);
+    text-decoration: none;
+    padding: 0;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+ul li, ol li {
+    padding: 0.2rem 1em;
+    list-style-type: none;
+}
+
+li::before {
+    content: attr(dot, '↪ ');
+}
+
+input {
+    display: block;
+    padding: 0.5em 0.8em;
+    min-width: 30rem;
+    border-radius: var(--border_radius);
+    border: 2px solid hsla(0, 0%, 40%, 0.3);
+    margin: 0.5rem 0;
+    transition: border 0.3s ease-in-out;
+}
+input:hover, input:focus {
+    border: 2px solid hsla(0, 0%, 40%, 0.90);
+    transition: border 0.3s ease-in-out;
+}
+
+section.main h1 {
+    margin-top: 2.7rem;
+    margin-bottom: 1.5rem;
+}
+section.main h2 {
+    margin-top: 2.3rem;
+    margin-bottom: 1.2rem;
+}
+section.main h3 {
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
+}
+section.main h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+section.main h5 {
+    margin-top: 1.3rem;
+    margin-bottom: 0.35rem;
+}
+section.main h6 {
+    margin-top: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+section.main p {
+    margin-top: 0.6rem;
+    margin-bottom: 0.2rem;
+}
+
+section.main :is(h1, h2, h3)::after {
+    content: '';
+    width: 100%;
+    display: block;
+    border-bottom: 2px dashed var(--main-color);
+    opacity: 0.6;
+}
+
+
+blockquote {
+    font-family: var(--font_i);
+    font-size: 1.1rem;
+}
+
+.white {
+    color: white;
+}
+.italic {
+    font-style: italic;
+}
+.highlight {
+    text-shadow: 3px 3px 5px black;
+}
+:is(a, button, p, span).highlight {
+    text-shadow: 1px 1px 1px black;
+}
+
+.ytop {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+.ybottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+.ycenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.xleft {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+.xright {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+.xcenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.margincenter {
+    margin: 0 auto;
+}
+
+.spoiler {
+    opacity: 0.1;
+    transition: opacity 0.6s ease-in-out;
+}
+.spoiler:focus,
+.spoiler:hover {
+    opacity: 1;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.heighten {
+    min-height: calc(min(35rem, 100vh));
+}
+
+button {
+    border: none;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    border-radius: 3px;
+    width: 100%;
+    background-color: var(--sub-bg-color);
+    transition: box-shadow 0.1s ease-in-out;
+}
+button:hover,
+button:focus {
+    box-shadow: inset 0 0 500px hsla(0, 0%, 100%, 0.2);
+    transition: box-shadow 0.1s ease-in-out;
+}
+button:active {
+    box-shadow: inset 0 0 500px hsla(0, 0%, 0%, 0.1);
+    transition: box-shadow 0.1s ease-in-out;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0.4rem 0 1.2rem 0;
+    margin: 0;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+ul.fill {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+ul.fill > * {
+    flex: 1 1 1px;
+    min-width: max-content;
+}
+
+
+/* Special case */
+.toggle-dark-mode {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    border-radius: 16px;
+    font-size: 1.7rem;
+    transition: opacity 0.1s ease-in-out;
+}
+.toggle-dark-mode[state="white"]::before {
+    content: '☀️';
+}
+.toggle-dark-mode[state="black"]::before {
+    content: '🌚';
+}
+.change-lang {
+    position: absolute;
+    top: 12px;
+    right: 60px; /* 56 + 4 */
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    border-radius: 16px;
+    font-size: 1.7rem;
+    transition: opacity 0.1s ease-in-out;
+}
+.go-home {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    border-radius: 16px;
+    font-size: 1.7rem;
+    transition: opacity 0.2s ease-in-out;
+}
+.go-home::before {
+    content: '🏠';
+}
+.inactive {
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+}
+
+div[type="gallery"] {
+    /* Set how many columns you want */
+    column-count: 4; 
+    /* Space between the columns */
+    column-gap: 16px; 
+    width: 100%;
+}
+
+@media screen and (max-width: 840px) {
+    div[type="gallery"] {
+        column-count: 3; 
+    }
+}
+@media screen and (max-width: 640px) {
+    div[type="gallery"] {
+        column-count: 2; 
+    }
+}
+
+div[type="gallery"] > .item {
+    margin-bottom: 16px; 
+    border-radius: 8px;
+    break-inside: avoid; 
+    transition: transform 0.7s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+div[type="gallery"] > .item:hover,
+div[type="gallery"] > .item:focus {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 10px hsla(0, 0%, 0%, 0.7);
+    transition: transform 0.3s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+div[type="gallery"] > .item > img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+/* card thing */
+div[type="card"] {
+    --radius: 10px;
+
+    background-color: var(--bg2-color);
+    margin: 0;
+    padding: 0.5em 0.2em;
+    border-radius: var(--radius);
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+}
+div[type="card"] .title {
+    font-size: 180%;
+    display: block;
+    font-weight: 800;
+    margin: 0.05em 0.4rem 0.25em;
+}
+div[type="card"] .buttons {
+    display: flex;
+    flex-direction: row;
+    padding: 0.4rem;
+    margin: 0;
+    gap: 5px;
+    border-radius: var(--radius);
+}
+div[type="card"] .buttons button {
+    padding: 0.2em 0.9em;
+    margin: 0;
+}
+div[type="card"] .detail {
+    padding: 0.2rem;
+    margin: 0.2rem;
+    box-shadow: inset 0px 0px 10px 2px hsla(0, 0%, 0%, 0.15);
+    border-radius: var(--radius);
+    background-color: var(--bg3-color);
+    flex: 1 0 auto;
+}
