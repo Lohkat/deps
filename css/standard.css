@@ -23,6 +23,7 @@
     --font_b:  'EMP-Bold';
 
     --main-color: hsl(0, 0%, 0%);
+    --main-bad-color: hsl(0, 87%, 36%);
     --invert-color: hsl(0, 0%, 100%);
     --bg-color: hsl(0, 0%, 90%);
     --bg2-color: hsl(0, 0%, 80%);
@@ -44,6 +45,7 @@
 
 .dark-mode {
     --main-color: hsl(0, 0%, 100%);
+    --main-bad-color: hsl(0, 88%, 77%);
     --invert-color: hsl(0, 0%, 0%);
     --bg-color: hsl(0, 0%, 10%);
     --bg2-color: hsl(0, 0%, 20%);
@@ -602,4 +604,7 @@ div[type="card"] .detail {
     border-radius: var(--radius);
     background-color: var(--bg3-color);
     flex: 1 0 auto;
+}
+div[type="card"].invalid {
+    color: var(--main-bad-color);
 }
