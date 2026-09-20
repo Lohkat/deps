@@ -608,3 +608,6 @@ div[type="card"] .detail {
 div[type="card"].invalid {
     color: var(--main-bad-color);
 }
+div[type="card"] .enabled {
+    box-shadow: inset 0px 0px 10px 100px hsla(0, 0%, 100%, 0.3), 0px 0px 1px 1px hsla(0, 0%, 0%, 1);
+}
