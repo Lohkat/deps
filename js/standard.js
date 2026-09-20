@@ -67,7 +67,7 @@ const handleUserInputShowButtons = () => {
     if (window.MouseMovementEventId)
         clearTimeout(window.MouseMovementEventId);
 
-    const hideElements = [...goHomeButtons, ...darkModeButtons];
+    const hideElements = [...goHomeButtons, ...darkModeButtons, ...changeLanguage];
     hideElements.forEach(el => el.classList.remove("inactive"));
 
     window.MouseMovementEventId = setTimeout(() => {
