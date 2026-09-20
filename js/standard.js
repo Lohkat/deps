@@ -95,10 +95,13 @@ Array.from(document.querySelectorAll("[type=horizontal-bar]")).forEach(el => {
         if (percx < 0) percx = 0;
         if (percx > 1) percx = 1;
         
-        ev.target.style.background = 
+        /*ev.target.style.background = 
             "linear-gradient(90deg, var(--sub-bg-color) " + (100 * (percx)) + "%, " +
-            "var(--sub3-bg-color) " + (100 * (percx + 0.001)) + "%)";
+            "var(--sub3-bg-color) " + (100 * (percx + 0.001)) + "%)";*/
         // background: linear-gradient(90deg, var(--sub2-bg-color) 50%, var(--sub-bg-color) 50.01%);
+
+        if (ev.target.SetPercentageView)
+            ev.target.SetPercentageView(percx);
 
         ev.target.setAttribute("percentage", 100 * percx);
         if (ev.target.children.length > 0)
@@ -111,5 +114,10 @@ Array.from(document.querySelectorAll("[type=horizontal-bar]")).forEach(el => {
     el.addEventListener("mousedown", (e) => handleEvents(e));
     el.addEventListener("mouseup",   (e) => handleEvents(e));
     el.addEventListener("mouseleave",(e) => handleEvents(e));
+    el.SetPercentageView = (percx) => {
+        el.style.background = 
+            "linear-gradient(90deg, var(--sub-bg-color) " + (100 * (percx)) + "%, " +
+            "var(--sub3-bg-color) " + (100 * (percx + 0.001)) + "%)";
+    }
 });
 
